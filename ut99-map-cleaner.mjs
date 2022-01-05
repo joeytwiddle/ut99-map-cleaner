@@ -61,7 +61,7 @@ function alignNumberToGrid(numStr, options) {
 	const inputSign = numStr.charAt(0);
 
 	let outNum;
-	if (diff < 0.005 && false) {
+	if (diff < 0.005) {
 		// This was close to the grid, so it should probably be on the grid
 		outNum = roundedNum * resolution;
 	} else {
