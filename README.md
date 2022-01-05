@@ -6,4 +6,4 @@ But if you can serve the files using a local webserver, then it should work.
 
 ## TODO
 
-- [ ] Align actors to grid, by looking for `Location=(X=_Y=_Z=_)` lines.
+- [ ] ???
