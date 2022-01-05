@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>UT99 Map Cleaner</title>
+    </head>
+    <body>
+        <style>
+            textarea {
+                width: 48%;
+                height: 80%;
+            }
+        </style>
+        <textarea id="input" placeholder="Paste T3D here, then hit the button"></textarea>
+        <textarea id="output"></textarea>
+
+        <p>
+            <button id="process">Process</button>
+        </p>
+
+        <script type="module">
+            import { cleaner } from './ut99-map-cleaner.mjs'
+
+            const $ = (sel) => document.querySelector(sel);
+
+            const inputElem = $('#input');
+            const outputElem = $('#output');
+
+            const button = $('#process');
+
+            button.addEventListener('click', function () {
+                const inputText = inputElem.value;
+                console.log('Processing...');
+                button.textContent = 'Processing. Please wait...';
+                // We execute on a different tick, so the button visibly updates
+                setTimeout(() => {
+                    const outputText = cleaner.alignToGrid(inputText, { resolution: 0.1 });
+                    console.log(`Processed ${inputText.length} -> ${outputText.length}`);
+                    outputElem.value = outputText;
+                    button.textContent = 'Process';
+                }, 1);
+            });
+        </script>
+    </body>
+</html>
