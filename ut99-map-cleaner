@@ -2,7 +2,7 @@
 ":" //# comment; exec /usr/bin/env node --input-type=module - "$@" < "$0"
 
 import fs from 'fs';
-import { cleaner } from './ut99-map-cleaner.mjs'
+import { cleaner } from './ut99-map-cleaner-lib.mjs'
 
 const inputFilename = process.argv[2];
 const outputFilename = process.argv[3];
