@@ -12,13 +12,13 @@
         <textarea id="input" placeholder="Paste T3D here, then hit the button"></textarea>
         <textarea id="output"></textarea>
 
+        <script src="./ut99-map-cleaner-lib.js"></script>
+
         <p>
             <button id="process">Process</button>
         </p>
 
         <script type="module">
-            import { cleaner } from './ut99-map-cleaner-lib.mjs'
-
             const $ = (sel) => document.querySelector(sel);
 
             const inputElem = $('#input');
@@ -32,7 +32,7 @@
                 button.textContent = 'Processing. Please wait...';
                 // We execute on a different tick, so the button visibly updates
                 setTimeout(() => {
-                    const outputText = cleaner.alignToGrid(inputText, { resolution: 0.1 });
+                    const outputText = ut99MapCleaner.alignToGrid(inputText, { resolution: 0.1 });
                     console.log(`Processed ${inputText.length} -> ${outputText.length}`);
                     outputElem.value = outputText;
                     button.textContent = 'Process';
