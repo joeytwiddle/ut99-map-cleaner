@@ -14,7 +14,7 @@ Project status: Very basic beta
 
 ## Usage
 
-You can use the [web version here](./ut99-map-cleaner.html).  Simply copy and paste your t3d file.
+You can use the [web version here](https://joeytwiddle.github.io/ut99-map-cleaner/ut99-map-cleaner.html).  Simply copy and paste your t3d file.
 
 Or you can use the Node.js command-line tool, like this:
 
