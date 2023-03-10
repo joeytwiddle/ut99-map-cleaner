@@ -1,3 +1,5 @@
+# [ut99-map-cleaner](https://github.com/joeytwiddle/ut99-map-cleaner)
+
 ## What it does
 
 It looks for brush vertices and actor locations which are almost on the grid but not quite, and it snaps them onto the grid.
@@ -8,7 +10,7 @@ It takes a t3d file as input, and produces a t3d file as output.
 
 ## Usage
 
-You can use the web-page.  Simply copy and paste your t3d file.
+You can use the [web version here](./ut99-map-cleaner.html).  Simply copy and paste your t3d file.
 
 Or you can use the Node.js command-line tool, like this:
 
@@ -24,3 +26,4 @@ diff input.t3d output.t3d
 - [ ] Differentiate actors from brushes, maybe even types of actors, and allow different snapping to be applied.
 
 - [x] We could offer snapping for textures, but I'm not sure that would really have any value.
+
